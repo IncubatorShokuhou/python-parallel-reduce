@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-from setuptools import setup,find_packages
+from setuptools import find_packages, setup
 
 setup(name='reduce_p',
-      version='0.0.0.1',
+      version='0.0.1',
       description='parallelized reduce for Python',
       author='IncubatorShokuhou',
       author_email='lh@lasg.iap.ac.cn',
@@ -10,4 +10,4 @@ setup(name='reduce_p',
       license="GNU General Public License v3 (GPLv3)",
       install_requires=['more_itertools'],
       python_requires='>=3'
-)
+      )

@@ -1,6 +1,6 @@
 Metadata-Version: 1.2
 Name: reduce-p
-Version: 0.0.0.1
+Version: 0.0.1
 Summary: parallelized reduce for Python
 Home-page: https://github.com/IncubatorShokuhou/reduce_p
 Author: IncubatorShokuhou

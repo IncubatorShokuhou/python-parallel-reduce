@@ -13,13 +13,13 @@ Installation
 pip install git+https://github.com/IncubatorShokuhou/reduce_p.git
 ```
 
-Parallel iteration with a process/CPU:
+Parallel reduce example:
 
 ```python
 import os
 import time
 from reduce_p import reduce_p
-form functools import reduce
+from functools import reduce
 
 def max_new(i,j):  #attention: the function should better be able to handle with a None parameter
     time.sleep(0.1)
@@ -35,15 +35,15 @@ def max_new(i,j):  #attention: the function should better be able to handle with
             return max(i,j)
 
 a = time.time()
-reduce_p(max_new,range(500))
+p_result = reduce_p(max_new,range(500))
 b = time.time()
 p_time = b-a
 
 a = time.time()
-reduce_s(max_new,range(500))
+s_result = reduce(max_new,range(500))
 b = time.time()
 s_time = b-a
 
-print("serial version spends ",s_time," seconds")
-print("parallelized version spends ",p_time," seconds")
+print("serial version spends ",s_time," seconds, result is ",s_result)
+print("parallelized version spends ",p_time," seconds, result is ",p_result)
 ```

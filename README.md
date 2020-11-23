@@ -56,9 +56,9 @@ print("parallelized version spends ",p_time," seconds, result is ",p_result)
 ```
 
 result  
-'''
+```
 >>> print("serial version spends ",s_time," seconds, result is ",s_result)
 serial version spends  49.99384617805481  seconds, result is  499
 >>> print("parallelized version spends ",p_time," seconds, result is ",p_result)
 parallelized version spends  5.494153022766113  seconds, result is  499
-'''
+```

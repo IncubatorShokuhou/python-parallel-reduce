@@ -1,4 +1,5 @@
-## python-parallel-reduce  
+python-parallel-reduce  
+
 ==================
 Simple parallelized reduce for Python instead of `functools.reduce`, which is serial.
 

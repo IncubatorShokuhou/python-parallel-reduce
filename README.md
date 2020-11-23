@@ -2,12 +2,12 @@ python-parallel-reduce
 ==================
 Simple parallelized reduce for Python instead of `functools.reduce`, which is serial.
 
-[中文版](https://github.com/IncubatorShokuhou/python-parallel-reduce/blob/master/README_zh.md)
+[中文版](https://github.com/IncubatorShokuhou/python-parallel-reduce/blob/master/README_zh.md)|[ENGLISH](https://github.com/IncubatorShokuhou/python-parallel-reduce/blob/master/README.md)
 
 Quick Start
 -----------
 
-Installation
+### Installation
 
 ```shell
 pip install git+https://github.com/IncubatorShokuhou/python-parallel-reduce.git
@@ -20,7 +20,7 @@ then
 ```
 python setup install
 ```
-Parallel reduce example:
+### Parallel reduce example:
 
 ```python
 import os
@@ -55,10 +55,23 @@ print("serial version spends ",s_time," seconds, result is ",s_result)
 print("parallelized version spends ",p_time," seconds, result is ",p_result)
 ```
 
-result  
+### Result  
 ```
 >>> print("serial version spends ",s_time," seconds, result is ",s_result)
 serial version spends  49.99384617805481  seconds, result is  499
 >>> print("parallelized version spends ",p_time," seconds, result is ",p_result)
 parallelized version spends  5.494153022766113  seconds, result is  499
 ```
+
+### Parameters
+```python
+reduce_p(function, iterable[,n_jobs ,initializer])
+```
+`function`, `iterable`, `initializer`: same as in `functools.reduce`   except
+
+`n_jobs`: number of threads. Default use all cpus.
+
+### ATTENTION!
+It is recommended only when length of `iterable` is much larger than cpu numbers, or it will not necessarily faster than `functools.reduce`.
+
+The `function` should better be able to handle the situation that one of the parameters is `None`, or errors might happened, especially length of `iterable` is small.

@@ -10,7 +10,7 @@ Quick Start
 Installation
 
 ```shell
-pip install git+https://github.com/IncubatorShokuhou/reduce_p.git
+pip install git+https://github.com/IncubatorShokuhou/python-parallel-reduce.git
 ```
 
 Parallel reduce example:

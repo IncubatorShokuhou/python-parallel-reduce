@@ -9,5 +9,6 @@ setup(name='reduce_p',
       url='https://github.com/IncubatorShokuhou/reduce_p',
       license="GNU General Public License v3 (GPLv3)",
       install_requires=['more_itertools'],
-      python_requires='>=3'
+      python_requires='>=3',
+      packages=find_packages(exclude=['contrib', 'docs', 'tests*'])
       )

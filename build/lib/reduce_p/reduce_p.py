@@ -1,7 +1,8 @@
 import more_itertools as mit
 from itertools import repeat
-from functools import wraps,reduce
+from functools import reduce
 import multiprocessing
+
 def reduce_p(function, sequence, n_jobs=multiprocessing.cpu_count(), initial=None):
     if n_jobs == 1:
         return reduce(function, sequence, initial)
@@ -11,18 +12,3 @@ def reduce_p(function, sequence, n_jobs=multiprocessing.cpu_count(), initial=Non
             new_sequence = pool.starmap(reduce, zip(
                 repeat(function), sliced_sequence, repeat(initial)))
         return reduce(function, new_sequence, initial)
-
-def handle_nan(function):
-    @wraps(function)
-    def wrapper_function(i,j):
-        if i == None:
-            if j == None:
-                return None
-            else:
-                return j
-        else:
-            if j == None:
-                return i
-            else:
-                return function(i, j)
-    return wrapper_function

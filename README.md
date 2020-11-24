@@ -66,4 +66,4 @@ reduce_p(function, iterable[,n_jobs ,initializer])
 ### ATTENTION!
 It is recommended only when length of `iterable` is much larger than cpu numbers, or it will not necessarily faster than `functools.reduce`.
 
-The `function` should better be able to handle the situation that one of the parameters is `None`, or errors might happened, especially length of `iterable` is small.
+The `function` should better be able to handle the situation that one of the parameters is `None`, or errors might happened, especially when length of `iterable` is small.

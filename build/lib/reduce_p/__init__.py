@@ -15,7 +15,7 @@ def reduce_p(function, sequence, n_jobs=multiprocessing.cpu_count(), initial=Non
                 repeat(function), sliced_sequence, repeat(initial)))
         return reduce(function, new_sequence, initial)
 
-def handle_nan(function):
+def handle_none(function):
     @wraps(function)
     def wrapper_function(i,j):
         if i == None:

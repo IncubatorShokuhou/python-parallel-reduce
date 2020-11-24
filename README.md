@@ -25,11 +25,11 @@ python setup install
 ```python
 import os
 import time
-from reduce_p import reduce_p,handle_nan
+from reduce_p import reduce_p,handle_none
 from functools import reduce
 
-@handle_nan
-def max_new(i,j):  #attention: the function should better be decorated by `handle_nan` to handle with a None parameter
+@handle_none
+def max_new(i,j):  #attention: the function should better be decorated by `handle_none` to handle with a None parameter
     time.sleep(0.1)
     return max(i,j)
 

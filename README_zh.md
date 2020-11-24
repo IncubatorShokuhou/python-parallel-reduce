@@ -27,11 +27,11 @@ python setup install
 ```python
 import os
 import time
-from reduce_p import reduce_p, handle_nan
+from reduce_p import reduce_p, handle_none
 from functools import reduce
 
-@handle_nan 
-def max_new(i,j): #对函数进行修饰，使它能够处理None的参数
+@handle_none 
+def max_new(i,j): #使用`handle_none`对函数进行修饰，使它能够处理None的参数
     time.sleep(0.1)
     return max(i,j)
 

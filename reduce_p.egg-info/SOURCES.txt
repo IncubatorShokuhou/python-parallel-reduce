@@ -1,5 +1,7 @@
 README.md
 setup.py
+reduce_p/__init__.py
+reduce_p/reduce_p.py
 reduce_p.egg-info/PKG-INFO
 reduce_p.egg-info/SOURCES.txt
 reduce_p.egg-info/dependency_links.txt
